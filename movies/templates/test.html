@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="full" lang=en">
+<head>
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'js/sorttable.js' %}">
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/sorttable.js' %}"></script>
+
+<meta charset="UTF-8">
+    <title>Film Locations in San Francisco</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SF Movies</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="add">Add Movie</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<br><br>
+
+
+<h1>Film Locations in San Francisco</h1>
+<div class="container theme-showcase" role="main">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Film Locations in San Francisco</h1>
+        <p>If you love movies, and you love San Francisco, you're bound to love this -- a listing of filming locations
+            of movies shot in San Francisco from 1924 - 2014. You'll find the titles, locations, release year, and
+            studio for most of these films.</p>
+      </div>
+
+<div class="table-responsive">
+          <table class="sortable table table-striped table-bordered" border="1" width="100%" style="margin: 0px;">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Release Year</th>
+                <th>Locations</th>
+                <th>Production Company</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for movie in movies %}
+              <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.release_year }}</td>
+                <td>{{ movie.locations }}</td>
+                <td>{{ movie.production_company }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+
+
+h1 {
+    color:blue;
+
+}
+
+body#background {
+  background: url('/static/css/golden-gate-bridge-covered-in-fog-17864.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+body#bg {
+  background: url('/static/css/san-francisco-night.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+body#back {
+  background: url('/static/css/cablecar.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
